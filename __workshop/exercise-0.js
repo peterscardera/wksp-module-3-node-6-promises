@@ -3,7 +3,8 @@
 // Write a function testNum that takes a number as an argument and returns
 // a Promise that tests if the value is less than or greater than the value 10.
 
-// Exercise 1 is done...
+
+// Exercise 0.1 is done...
 
 const compareToTen = (num) => {
     myPromise = new Promise((resolve, reject) => {
@@ -37,7 +38,7 @@ const arrayOfWords = ['cucumber', 'tomatos', 'avocado']
 const complicatedArray = ['cucumber', 44, true]
   
 const makeAllCaps = (array) => {
-    
+    prom2 = new Promise((res, rej))
 }
 
 const sortWords = (array) => {

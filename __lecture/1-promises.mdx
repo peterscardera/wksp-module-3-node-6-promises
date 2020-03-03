@@ -86,7 +86,7 @@ _Where is there a potential problem?_
 #### The Node solution
 
 - Any I/O functions are made _asynchronous_
-- Node uses a separate _thread_ under its control to do the I/O
+- Node uses a separate _thread_ under its control to do the I/O ********
 - The I/O function will **not `return` anything**
 - Instead, the I/O function will take an additional parameter, a callback.
 - Node will register the callback function in its memory, and will call it back **later. When the database response comes back**.
@@ -116,6 +116,9 @@ _Where is there a potential problem?_
 This creates code such as the following:
 
 ```js
+
+//fs is to readfile
+
 fs.readFile("file.json", function (err, val) {
     if (err) {
         console.error("unable to read file");
@@ -196,6 +199,9 @@ _This pattern is so common that a shortcut method called `catch` exists which on
 The callback-based code above becomes:
 
 ```js
+// fs is to read and the readFile is a method
+
+
 fs.readFile("file.json")
     .then(JSON.parse)
     .then(function(data) {
